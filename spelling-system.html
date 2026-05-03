@@ -84,9 +84,26 @@ tr.extra-examples.open {
 }
 tr.extra-examples td {
   border-top: none;
-  padding: 6px 12px 12px 24px;
+  padding: 10px 12px 14px 12px;
+}
+.example-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.chip {
+  background: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 0.85em;
+  color: #333;
+  white-space: nowrap;
+}
+.chip span {
+  color: #888;
   font-size: 0.9em;
-  color: #444;
+  margin-left: 4px;
 }
 .hint {
   font-size: 0.85em;
@@ -145,67 +162,131 @@ tr.extra-examples td {
     <tr><th>Letter</th><th>IPA</th><th>Example</th><th>Meaning</th></tr>
 
     <tr class="expandable"><td>b</td><td>[p]</td><td>bav</td><td>look 看</td></tr>
-    <tr class="extra-examples"><td colspan="4">bax 粘贴 stick &nbsp;|&nbsp; bar 山坡 mountainside &nbsp;|&nbsp; baf 茶盘 tea tray</td></tr>
+    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
+      <div class="chip">bax <span>粘贴 stick</span></div>
+      <div class="chip">bar <span>山坡 mountainside</span></div>
+      <div class="chip">baf <span>茶盘 tea tray</span></div>
+    </div></td></tr>
 
-    <tr class="expandable"><td>p</td><td>[pʰ]</td><td>pox</td><td>put; marry(of a woman) 放置；嫁</td></tr>
-    <tr class="extra-examples"><td colspan="4">paf 住 live &nbsp;|&nbsp; pif 吐 spit</td></tr>
+    <tr class="expandable"><td>p</td><td>[pʰ]</td><td>pox</td><td>put; marry (of a woman) 放置；嫁</td></tr>
+    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
+      <div class="chip">paf <span>住 live</span></div>
+      <div class="chip">pif <span>吐 spit</span></div>
+    </div></td></tr>
 
     <tr class="expandable"><td>m</td><td>[m]</td><td>mor</td><td>cat 猫</td></tr>
-    <tr class="extra-examples"><td colspan="4">mef 天 sky &nbsp;|&nbsp; miv 火 fire</td></tr>
+    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
+      <div class="chip">mef <span>天 sky</span></div>
+      <div class="chip">miv <span>火 fire</span></div>
+    </div></td></tr>
 
     <tr class="expandable"><td>d</td><td>[t]</td><td>daf</td><td>wear 穿</td></tr>
-    <tr class="extra-examples"><td colspan="4">div 要 want, need &nbsp;|&nbsp; diex 慢 slo</td></tr>
+    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
+      <div class="chip">div <span>要 want, need</span></div>
+      <div class="chip">diex <span>慢 slow</span></div>
+    </div></td></tr>
 
     <tr class="expandable"><td>t</td><td>[tʰ]</td><td>taf</td><td>burn 烧</td></tr>
-    <tr class="extra-examples"><td colspan="4">tax 不 not &nbsp;|&nbsp; tief 摘 pick, pluck</td></tr>
+    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
+      <div class="chip">tax <span>不 not</span></div>
+      <div class="chip">tief <span>摘 pick, pluck</span></div>
+    </div></td></tr>
 
     <tr class="expandable"><td>l</td><td>[l]</td><td>lav</td><td>road 路</td></tr>
-    <tr class="extra-examples"><td colspan="4">lir 脚 foot &nbsp;|&nbsp; lof 眼 eye</td></tr>
+    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
+      <div class="chip">lir <span>脚 foot</span></div>
+      <div class="chip">lof <span>眼 eye</span></div>
+    </div></td></tr>
 
     <tr class="expandable"><td>g</td><td>[k]</td><td>gar</td><td>crow 乌鸦</td></tr>
-    <tr class="extra-examples"><td colspan="4">gav 挖 dig &nbsp;|&nbsp; gof 他 he</td></tr>
+    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
+      <div class="chip">gav <span>挖 dig</span></div>
+      <div class="chip">gof <span>他 he</span></div>
+    </div></td></tr>
 
     <tr class="expandable"><td>k</td><td>[kʰ]</td><td>kax</td><td>pass 过</td></tr>
-    <tr class="extra-examples"><td colspan="4">kar 苦 bitter &nbsp;|&nbsp; kuf 口 mouth</td></tr>
+    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
+      <div class="chip">kar <span>苦 bitter</span></div>
+      <div class="chip">kuf <span>口 mouth</span></div>
+    </div></td></tr>
 
     <tr class="expandable"><td>ng</td><td>[ŋ]</td><td>ngaf</td><td>I / me 我</td></tr>
-    <tr class="extra-examples"><td colspan="4">ngar 牛 cow &nbsp;|&nbsp; ngov 鱼 fish</td></tr>
+    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
+      <div class="chip">ngar <span>牛 cow</span></div>
+      <div class="chip">ngov <span>鱼 fish</span></div>
+    </div></td></tr>
 
     <tr class="expandable"><td>h</td><td>[x]</td><td>har</td><td>hit 打</td></tr>
-    <tr class="extra-examples"><td colspan="4">hav 看 look &nbsp;|&nbsp; hof 火 fire</td></tr>
+    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
+      <div class="chip">hav <span>看 look</span></div>
+      <div class="chip">hof <span>火 fire</span></div>
+    </div></td></tr>
 
     <tr class="expandable"><td>hx</td><td>[ɣ]</td><td>hxaf</td><td>write 写</td></tr>
-    <tr class="extra-examples"><td colspan="4">hxar 话 speech &nbsp;|&nbsp; hxov 活 live</td></tr>
+    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
+      <div class="chip">hxar <span>话 speech</span></div>
+      <div class="chip">hxov <span>活 live</span></div>
+    </div></td></tr>
 
     <tr class="expandable"><td>j</td><td>[tɕ]</td><td>jier</td><td>shout 喊</td></tr>
-    <tr class="extra-examples"><td colspan="4">jianf 容易 easy &nbsp;|&nbsp; jir 脚 foot</td></tr>
+    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
+      <div class="chip">jianf <span>容易 easy</span></div>
+      <div class="chip">jir <span>脚 foot</span></div>
+    </div></td></tr>
 
     <tr class="expandable"><td>q</td><td>[tɕʰ]</td><td>pief</td><td>kick 踢</td></tr>
-    <tr class="extra-examples"><td colspan="4">qiaxpaix 麻雀 sparrow &nbsp;|&nbsp; qiv 鼻 nose</td></tr>
+    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
+      <div class="chip">qiaxpaix <span>麻雀 sparrow</span></div>
+      <div class="chip">qiv <span>鼻 nose</span></div>
+    </div></td></tr>
 
     <tr class="expandable"><td>n</td><td>[ȵ]</td><td>nix</td><td>look for 找</td></tr>
-    <tr class="extra-examples"><td colspan="4">nif 你 you &nbsp;|&nbsp; niex 斜 slant</td></tr>
+    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
+      <div class="chip">nif <span>你 you</span></div>
+      <div class="chip">niex <span>斜 slant</span></div>
+    </div></td></tr>
 
     <tr class="expandable"><td>x</td><td>[ɕ]</td><td>xief</td><td>have 有</td></tr>
-    <tr class="extra-examples"><td colspan="4">xinfgax 绿 green &nbsp;|&nbsp; xar 冷 cold</td></tr>
+    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
+      <div class="chip">xinfgax <span>绿 green</span></div>
+      <div class="chip">xar <span>冷 cold</span></div>
+    </div></td></tr>
 
     <tr class="expandable"><td>z</td><td>[ts]</td><td>zav</td><td>take 拿</td></tr>
-    <tr class="extra-examples"><td colspan="4">zar 左 left &nbsp;|&nbsp; zof 坐 sit</td></tr>
+    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
+      <div class="chip">zar <span>左 left</span></div>
+      <div class="chip">zof <span>坐 sit</span></div>
+    </div></td></tr>
 
     <tr class="expandable"><td>c</td><td>[tsʰ]</td><td>cav</td><td>spinning wheel 纺车</td></tr>
-    <tr class="extra-examples"><td colspan="4">car 草 grass &nbsp;|&nbsp; cof 粗 coarse</td></tr>
+    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
+      <div class="chip">car <span>草 grass</span></div>
+      <div class="chip">cof <span>粗 coarse</span></div>
+    </div></td></tr>
 
     <tr class="expandable"><td>s</td><td>[s]</td><td>sav</td><td>cold 冷</td></tr>
-    <tr class="extra-examples"><td colspan="4">sar 话 word &nbsp;|&nbsp; sax 劳 labour</td></tr>
+    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
+      <div class="chip">sar <span>话 word</span></div>
+      <div class="chip">sax <span>劳 labour</span></div>
+    </div></td></tr>
 
     <tr class="expandable"><td>v</td><td>[z]</td><td>rax</td><td>fly 飞</td></tr>
-    <tr class="extra-examples"><td colspan="4">rav 挂 hang &nbsp;|&nbsp; rar 鸡 chicken</td></tr>
+    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
+      <div class="chip">rav <span>挂 hang</span></div>
+      <div class="chip">rar <span>鸡 chicken</span></div>
+    </div></td></tr>
 
     <tr class="expandable"><td>y</td><td>[j]</td><td>yir</td><td>see 见</td></tr>
-    <tr class="extra-examples"><td colspan="4">yav 有 have &nbsp;|&nbsp; yof 用 use</td></tr>
+    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
+      <div class="chip">yav <span>有 have</span></div>
+      <div class="chip">yof <span>用 use</span></div>
+    </div></td></tr>
 
     <tr class="expandable"><td>w</td><td>[w]</td><td>wuf</td><td>cow 牛</td></tr>
-    <tr class="extra-examples"><td colspan="4">wav 弯 bend &nbsp;|&nbsp; wor 挖 dig</td></tr>
+    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
+      <div class="chip">wav <span>弯 bend</span></div>
+      <div class="chip">wor <span>挖 dig</span></div>
+    </div></td></tr>
   </table>
   <p><em>Note: n and l are allophones; n before the vowel i is read as [ȵ].</em></p>
 
@@ -216,67 +297,131 @@ tr.extra-examples td {
     <tr><th>Final</th><th>IPA</th><th>Example</th><th>Meaning</th></tr>
 
     <tr class="expandable"><td>i</td><td>[i]/[ɨ]/[ɿ]</td><td>jir</td><td>foot 脚</td></tr>
-    <tr class="extra-examples"><td colspan="4">nix 找 look for &nbsp;|&nbsp; xief 有 have</td></tr>
+    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
+      <div class="chip">nix <span>找 look for</span></div>
+      <div class="chip">xief <span>有 have</span></div>
+    </div></td></tr>
 
     <tr class="expandable"><td>u</td><td>[u]</td><td>wuf</td><td>cow 牛</td></tr>
-    <tr class="extra-examples"><td colspan="4">kuf 口 mouth &nbsp;|&nbsp; huf 虎 tiger</td></tr>
+    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
+      <div class="chip">kuf <span>口 mouth</span></div>
+      <div class="chip">huf <span>虎 tiger</span></div>
+    </div></td></tr>
 
     <tr class="expandable"><td>a</td><td>[a]</td><td>daf</td><td>wear 穿</td></tr>
-    <tr class="extra-examples"><td colspan="4">bav 看 look &nbsp;|&nbsp; taf 烧 burn &nbsp;|&nbsp; sax 劳 labour</td></tr>
+    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
+      <div class="chip">bav <span>看 look</span></div>
+      <div class="chip">taf <span>烧 burn</span></div>
+      <div class="chip">sax <span>劳 labour</span></div>
+    </div></td></tr>
 
     <tr class="expandable"><td>ia</td><td>[ia]</td><td>qiaxpaix</td><td>sparrow 麻雀</td></tr>
-    <tr class="extra-examples"><td colspan="4">jianf 容易 easy &nbsp;|&nbsp; bixtiaox 平坝 flatland</td></tr>
+    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
+      <div class="chip">jianf <span>容易 easy</span></div>
+      <div class="chip">bixtiaox <span>平坝 flatland</span></div>
+    </div></td></tr>
 
     <tr class="expandable"><td>o</td><td>[o]</td><td>gof</td><td>he 他</td></tr>
-    <tr class="extra-examples"><td colspan="4">pox 放 release &nbsp;|&nbsp; mor 猫 cat</td></tr>
+    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
+      <div class="chip">pox <span>放 release</span></div>
+      <div class="chip">mor <span>猫 cat</span></div>
+    </div></td></tr>
 
     <tr class="expandable"><td>e</td><td>[e]</td><td>mef</td><td>sky 天</td></tr>
-    <tr class="extra-examples"><td colspan="4">sef 你 you (formal) &nbsp;|&nbsp; jiev 追 chase</td></tr>
+    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
+      <div class="chip">sef <span>你 you (formal)</span></div>
+      <div class="chip">jiev <span>追 chase</span></div>
+    </div></td></tr>
 
     <tr class="expandable"><td>ie</td><td>[ie]</td><td>jiev</td><td>chase 追</td></tr>
-    <tr class="extra-examples"><td colspan="4">xief 有 have &nbsp;|&nbsp; pief 踢 kick</td></tr>
+    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
+      <div class="chip">xief <span>有 have</span></div>
+      <div class="chip">pief <span>踢 kick</span></div>
+    </div></td></tr>
 
     <tr class="expandable"><td>ai</td><td>[ai]</td><td>baiv</td><td>child 小孩</td></tr>
-    <tr class="extra-examples"><td colspan="4">paix 雀 sparrow &nbsp;|&nbsp; taif 摆 arrange</td></tr>
+    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
+      <div class="chip">paix <span>雀 sparrow</span></div>
+      <div class="chip">taif <span>摆 arrange</span></div>
+    </div></td></tr>
 
     <tr class="expandable"><td>uai</td><td>[uai]</td><td>kuaiv</td><td>chair 椅子</td></tr>
-    <tr class="extra-examples"><td colspan="4">guaif 怪 strange &nbsp;|&nbsp; huair 花 flower</td></tr>
+    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
+      <div class="chip">guaif <span>怪 strange</span></div>
+      <div class="chip">huair <span>花 flower</span></div>
+    </div></td></tr>
 
     <tr class="expandable"><td>ei</td><td>[ei]</td><td>anxbeix</td><td>uncle 叔叔</td></tr>
-    <tr class="extra-examples"><td colspan="4">meir 没 not have &nbsp;|&nbsp; peiv 陪 accompany</td></tr>
+    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
+      <div class="chip">meir <span>没 not have</span></div>
+      <div class="chip">peiv <span>陪 accompany</span></div>
+    </div></td></tr>
 
     <tr class="expandable"><td>ui</td><td>[uai]</td><td>gofguix</td><td>cousin 表姐</td></tr>
-    <tr class="extra-examples"><td colspan="4">kuiv 贵 expensive &nbsp;|&nbsp; suir 随 follow</td></tr>
+    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
+      <div class="chip">kuiv <span>贵 expensive</span></div>
+      <div class="chip">suir <span>随 follow</span></div>
+    </div></td></tr>
 
     <tr class="expandable"><td>ao</td><td>[au]</td><td>baofqir</td><td>pheasant 野鸡</td></tr>
-    <tr class="extra-examples"><td colspan="4">taov 讨 ask &nbsp;|&nbsp; gaox 高 tall</td></tr>
+    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
+      <div class="chip">taov <span>讨 ask</span></div>
+      <div class="chip">gaox <span>高 tall</span></div>
+    </div></td></tr>
 
     <tr class="expandable"><td>iao</td><td>[iau]</td><td>bixtiaox</td><td>flatland 平坝</td></tr>
-    <tr class="extra-examples"><td colspan="4">jiaov 叫 call &nbsp;|&nbsp; xiaof 小 small</td></tr>
+    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
+      <div class="chip">jiaov <span>叫 call</span></div>
+      <div class="chip">xiaof <span>小 small</span></div>
+    </div></td></tr>
 
     <tr class="expandable"><td>ou</td><td>[ɔu]</td><td>axkoux</td><td>corner 角落</td></tr>
-    <tr class="extra-examples"><td colspan="4">gouv 狗 dog &nbsp;|&nbsp; touf 头 head</td></tr>
+    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
+      <div class="chip">gouv <span>狗 dog</span></div>
+      <div class="chip">touf <span>头 head</span></div>
+    </div></td></tr>
 
     <tr class="expandable"><td>iu</td><td>[iɔu]</td><td>biuf</td><td>daughter 女儿</td></tr>
-    <tr class="extra-examples"><td colspan="4">liuv 流 flow &nbsp;|&nbsp; jiux 久 long time</td></tr>
+    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
+      <div class="chip">liuv <span>流 flow</span></div>
+      <div class="chip">jiux <span>久 long time</span></div>
+    </div></td></tr>
 
     <tr class="expandable"><td>an</td><td>[ã]</td><td>banf</td><td>eagle 鹰</td></tr>
-    <tr class="extra-examples"><td colspan="4">janv 站 stand &nbsp;|&nbsp; tanr 谈 talk</td></tr>
+    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
+      <div class="chip">janv <span>站 stand</span></div>
+      <div class="chip">tanr <span>谈 talk</span></div>
+    </div></td></tr>
 
     <tr class="expandable"><td>ian</td><td>[iã]</td><td>jianf</td><td>easy 容易</td></tr>
-    <tr class="extra-examples"><td colspan="4">tianv 甜 sweet &nbsp;|&nbsp; nianr 年 year</td></tr>
+    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
+      <div class="chip">tianv <span>甜 sweet</span></div>
+      <div class="chip">nianr <span>年 year</span></div>
+    </div></td></tr>
 
     <tr class="expandable"><td>uan</td><td>[uã]</td><td>suanv</td><td>small 小</td></tr>
-    <tr class="extra-examples"><td colspan="4">guanr 关 close &nbsp;|&nbsp; huanf 欢 happy</td></tr>
+    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
+      <div class="chip">guanr <span>关 close</span></div>
+      <div class="chip">huanf <span>欢 happy</span></div>
+    </div></td></tr>
 
     <tr class="expandable"><td>en</td><td>[ẽ]</td><td>enxqiv</td><td>nose 鼻子</td></tr>
-    <tr class="extra-examples"><td colspan="4">menr 闷 stuffy &nbsp;|&nbsp; benf 笨 clumsy</td></tr>
+    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
+      <div class="chip">menr <span>闷 stuffy</span></div>
+      <div class="chip">benf <span>笨 clumsy</span></div>
+    </div></td></tr>
 
     <tr class="expandable"><td>in</td><td>[ĩ]</td><td>xinfgax</td><td>green 绿</td></tr>
-    <tr class="extra-examples"><td colspan="4">jinv 近 near &nbsp;|&nbsp; linr 邻 neighbour</td></tr>
+    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
+      <div class="chip">jinv <span>近 near</span></div>
+      <div class="chip">linr <span>邻 neighbour</span></div>
+    </div></td></tr>
 
     <tr class="expandable"><td>ong</td><td>[ũ]</td><td>rongv</td><td>younger sister 妹妹</td></tr>
-    <tr class="extra-examples"><td colspan="4">gongv 共 together &nbsp;|&nbsp; longr 龙 dragon</td></tr>
+    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
+      <div class="chip">gongv <span>共 together</span></div>
+      <div class="chip">longr <span>龙 dragon</span></div>
+    </div></td></tr>
   </table>
   <p><em>Note: Final i after initials z, c, s, r is pronounced [ɿ].</em></p>
 
