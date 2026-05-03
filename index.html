@@ -35,19 +35,38 @@ body {
 }
 h1 {
   font-size: 40px;
+  line-height: 1.2;
 }
 nav {
   margin-top: 20px;
   margin-bottom: 40px;
 }
 nav a {
-  margin-right: 25px;
+  margin-right: 16px;
+  margin-bottom: 8px;
   text-decoration: none;
   font-weight: 600;
   color: #333;
+  display: inline-block;
 }
 nav a:hover {
   text-decoration: underline;
+}
+@media (max-width: 600px) {
+  body {
+    padding: 24px 20px;
+  }
+  h1 {
+    font-size: 28px;
+  }
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+  }
+  nav a {
+    margin-right: 0;
+  }
 }
 </style>
 </head>
@@ -62,12 +81,8 @@ nav a:hover {
   <a href="/research.html">Research</a>
 </nav>
 <main>
-  <p>
-    Welcome to the Tujia Language Project.
-  </p>
-  <p>
-    This website documents the Tujia language, including grammar, vocabulary, texts and research resources.
-  </p>
+  <p>Welcome to the Tujia Language Project.</p>
+  <p>This website documents the Tujia language, including grammar, vocabulary, texts and research resources.</p>
 </main>
 </body>
 </html>
