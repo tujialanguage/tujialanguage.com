@@ -29,25 +29,16 @@ body {
   line-height: 1.6;
   color: #222;
 }
-h1 {
-  font-size: 40px;
-}
-h2 {
-  margin-top: 40px;
-}
-nav {
-  margin-top: 20px;
-  margin-bottom: 40px;
-}
+h1 { font-size: 40px; }
+h2 { margin-top: 40px; }
+nav { margin-top: 20px; margin-bottom: 40px; }
 nav a {
   margin-right: 25px;
   text-decoration: none;
   font-weight: 600;
   color: #333;
 }
-nav a:hover {
-  text-decoration: underline;
-}
+nav a:hover { text-decoration: underline; }
 table {
   border-collapse: collapse;
   width: 100%;
@@ -61,6 +52,42 @@ th, td {
 th {
   background: #f5f5f5;
   font-weight: 600;
+}
+
+/* 可点击行 */
+tr.expandable {
+  cursor: pointer;
+}
+tr.expandable:hover {
+  background: #f0f0f0;
+}
+tr.expandable td:first-child::after {
+  content: " ▸";
+  font-size: 0.75em;
+  color: #999;
+}
+tr.expandable.open td:first-child::after {
+  content: " ▾";
+}
+
+/* 展开内容行 */
+tr.extra-examples {
+  display: none;
+  background: #fafafa;
+}
+tr.extra-examples.open {
+  display: table-row;
+}
+tr.extra-examples td {
+  border-top: none;
+  padding: 6px 12px 12px 24px;
+  font-size: 0.9em;
+  color: #444;
+}
+.hint {
+  font-size: 0.85em;
+  color: #888;
+  margin-bottom: 4px;
 }
 </style>
 </head>
@@ -88,57 +115,143 @@ th {
 
   <h2>II. Consonants</h2>
   <p>Tujia has 21 consonants (initials):</p>
-  <table>
+  <p class="hint">Click any row to see more example words.</p>
+  <table id="consonants-table">
     <tr><th>Letter</th><th>IPA</th><th>Example</th><th>Meaning</th></tr>
-    <tr><td>b</td><td>[p]</td><td>bav</td><td>look 看</td></tr>
-    <tr><td>p</td><td>[pʰ]</td><td>pox</td><td>release 放</td></tr>
-    <tr><td>m</td><td>[m]</td><td>mor</td><td>cat 猫</td></tr>
-    <tr><td>d</td><td>[t]</td><td>daf</td><td>wear 穿</td></tr>
-    <tr><td>t</td><td>[tʰ]</td><td>taf</td><td>burn 烧</td></tr>
-    <tr><td>l</td><td>[l]</td><td>lav</td><td>road 路</td></tr>
-    <tr><td>g</td><td>[k]</td><td>gar</td><td>crow 乌鸦</td></tr>
-    <tr><td>k</td><td>[kʰ]</td><td>kax</td><td>pass 过</td></tr>
-    <tr><td>ng</td><td>[ŋ]</td><td>ngaf</td><td>I / me 我</td></tr>
-    <tr><td>h</td><td>[x]</td><td>har</td><td>hit 打</td></tr>
-    <tr><td>hx</td><td>[ɣ]</td><td>hxaf</td><td>write 写</td></tr>
-    <tr><td>j</td><td>[tɕ]</td><td>jier</td><td>shout 喊</td></tr>
-    <tr><td>q</td><td>[tɕʰ]</td><td>pief</td><td>kick 踢</td></tr>
-    <tr><td>n</td><td>[ȵ]</td><td>nix</td><td>look for 找</td></tr>
-    <tr><td>x</td><td>[ɕ]</td><td>xief</td><td>have 有</td></tr>
-    <tr><td>Z</td><td>[ts]</td><td>zav</td><td>take 拿</td></tr>
-    <tr><td>C</td><td>[tsʰ]</td><td>cav</td><td>spinning wheel 纺车</td></tr>
-    <tr><td>S</td><td>[s]</td><td>sav</td><td>cold 冷</td></tr>
-    <tr><td>v</td><td>[z]</td><td>rax</td><td>fly 飞</td></tr>
-    <tr><td>Y</td><td>[j]</td><td>yir</td><td>see 见</td></tr>
-    <tr><td>w</td><td>[w]</td><td>wuf</td><td>cow 牛</td></tr>
+
+    <tr class="expandable"><td>b</td><td>[p]</td><td>bav</td><td>look 看</td></tr>
+    <tr class="extra-examples"><td colspan="4">bax 滴 drop &nbsp;|&nbsp; bar 坡 slope &nbsp;|&nbsp; baf 茶盘 tea tray</td></tr>
+
+    <tr class="expandable"><td>p</td><td>[pʰ]</td><td>pox</td><td>release 放</td></tr>
+    <tr class="extra-examples"><td colspan="4">piev 肠 intestine &nbsp;|&nbsp; par 皮 skin</td></tr>
+
+    <tr class="expandable"><td>m</td><td>[m]</td><td>mor</td><td>cat 猫</td></tr>
+    <tr class="extra-examples"><td colspan="4">mef 天 sky &nbsp;|&nbsp; max 蜂 bee</td></tr>
+
+    <tr class="expandable"><td>d</td><td>[t]</td><td>daf</td><td>wear 穿</td></tr>
+    <tr class="extra-examples"><td colspan="4">dar 下 down &nbsp;|&nbsp; dav 欠 owe</td></tr>
+
+    <tr class="expandable"><td>t</td><td>[tʰ]</td><td>taf</td><td>burn 烧</td></tr>
+    <tr class="extra-examples"><td colspan="4">tav 织 weave &nbsp;|&nbsp; tar 推 push</td></tr>
+
+    <tr class="expandable"><td>l</td><td>[l]</td><td>lav</td><td>road 路</td></tr>
+    <tr class="extra-examples"><td colspan="4">lir 脚 foot &nbsp;|&nbsp; lof 眼 eye</td></tr>
+
+    <tr class="expandable"><td>g</td><td>[k]</td><td>gar</td><td>crow 乌鸦</td></tr>
+    <tr class="extra-examples"><td colspan="4">gav 挖 dig &nbsp;|&nbsp; gof 他 he</td></tr>
+
+    <tr class="expandable"><td>k</td><td>[kʰ]</td><td>kax</td><td>pass 过</td></tr>
+    <tr class="extra-examples"><td colspan="4">kar 苦 bitter &nbsp;|&nbsp; kuf 口 mouth</td></tr>
+
+    <tr class="expandable"><td>ng</td><td>[ŋ]</td><td>ngaf</td><td>I / me 我</td></tr>
+    <tr class="extra-examples"><td colspan="4">ngar 牛 cow &nbsp;|&nbsp; ngov 鱼 fish</td></tr>
+
+    <tr class="expandable"><td>h</td><td>[x]</td><td>har</td><td>hit 打</td></tr>
+    <tr class="extra-examples"><td colspan="4">hav 看 look &nbsp;|&nbsp; hof 火 fire</td></tr>
+
+    <tr class="expandable"><td>hx</td><td>[ɣ]</td><td>hxaf</td><td>write 写</td></tr>
+    <tr class="extra-examples"><td colspan="4">hxar 话 speech &nbsp;|&nbsp; hxov 活 live</td></tr>
+
+    <tr class="expandable"><td>j</td><td>[tɕ]</td><td>jier</td><td>shout 喊</td></tr>
+    <tr class="extra-examples"><td colspan="4">jianf 容易 easy &nbsp;|&nbsp; jir 脚 foot</td></tr>
+
+    <tr class="expandable"><td>q</td><td>[tɕʰ]</td><td>pief</td><td>kick 踢</td></tr>
+    <tr class="extra-examples"><td colspan="4">qiaxpaix 麻雀 sparrow &nbsp;|&nbsp; qiv 鼻 nose</td></tr>
+
+    <tr class="expandable"><td>n</td><td>[ȵ]</td><td>nix</td><td>look for 找</td></tr>
+    <tr class="extra-examples"><td colspan="4">nif 你 you &nbsp;|&nbsp; niex 斜 slant</td></tr>
+
+    <tr class="expandable"><td>x</td><td>[ɕ]</td><td>xief</td><td>have 有</td></tr>
+    <tr class="extra-examples"><td colspan="4">xinfgax 绿 green &nbsp;|&nbsp; xar 冷 cold</td></tr>
+
+    <tr class="expandable"><td>z</td><td>[ts]</td><td>zav</td><td>take 拿</td></tr>
+    <tr class="extra-examples"><td colspan="4">zar 左 left &nbsp;|&nbsp; zof 坐 sit</td></tr>
+
+    <tr class="expandable"><td>c</td><td>[tsʰ]</td><td>cav</td><td>spinning wheel 纺车</td></tr>
+    <tr class="extra-examples"><td colspan="4">car 草 grass &nbsp;|&nbsp; cof 粗 coarse</td></tr>
+
+    <tr class="expandable"><td>s</td><td>[s]</td><td>sav</td><td>cold 冷</td></tr>
+    <tr class="extra-examples"><td colspan="4">sar 话 word &nbsp;|&nbsp; sax 劳 labour</td></tr>
+
+    <tr class="expandable"><td>v</td><td>[z]</td><td>rax</td><td>fly 飞</td></tr>
+    <tr class="extra-examples"><td colspan="4">rav 挂 hang &nbsp;|&nbsp; rar 鸡 chicken</td></tr>
+
+    <tr class="expandable"><td>y</td><td>[j]</td><td>yir</td><td>see 见</td></tr>
+    <tr class="extra-examples"><td colspan="4">yav 有 have &nbsp;|&nbsp; yof 用 use</td></tr>
+
+    <tr class="expandable"><td>w</td><td>[w]</td><td>wuf</td><td>cow 牛</td></tr>
+    <tr class="extra-examples"><td colspan="4">wav 弯 bend &nbsp;|&nbsp; wor 挖 dig</td></tr>
   </table>
   <p><em>Note: n and l are allophones; n before the vowel i is read as [ȵ].</em></p>
 
   <h2>III. Vowels / Finals</h2>
   <p>Tujia has 21 finals:</p>
-  <table>
+  <p class="hint">Click any row to see more example words.</p>
+  <table id="finals-table">
     <tr><th>Final</th><th>IPA</th><th>Example</th><th>Meaning</th></tr>
-    <tr><td>i</td><td>[i]</td><td>jir</td><td>foot 脚</td></tr>
-    <tr><td>u</td><td>[u]</td><td>wuf</td><td>cow 牛</td></tr>
-    <tr><td>a</td><td>[a]</td><td>daf</td><td>wear 穿</td></tr>
-    <tr><td>ia</td><td>[ia]</td><td>qiaxpaix</td><td>sparrow 麻雀</td></tr>
-    <tr><td>o</td><td>[o]</td><td>gof</td><td>he 他</td></tr>
-    <tr><td>e</td><td>[e]</td><td>mef</td><td>sky 天</td></tr>
-    <tr><td>ie</td><td>[ie]</td><td>jiev</td><td>chase 追</td></tr>
-    <tr><td>ai</td><td>[ai]</td><td>baiv</td><td>child 小孩</td></tr>
-    <tr><td>uai</td><td>[uai]</td><td>kuaiv</td><td>chair 椅子</td></tr>
-    <tr><td>ei</td><td>[ei]/[ɨ]</td><td>anxbeix</td><td>uncle 叔叔</td></tr>
-    <tr><td>ui</td><td>[uai]</td><td>gofguix</td><td>cousin 表姐</td></tr>
-    <tr><td>ao</td><td>[au]</td><td>baofqir</td><td>pheasant 野鸡</td></tr>
-    <tr><td>iao</td><td>[iau]</td><td>bixtiaox</td><td>flatland 平坝</td></tr>
-    <tr><td>ou</td><td>[ɔu]</td><td>axkoux</td><td>corner 角落</td></tr>
-    <tr><td>iu</td><td>[iɔu]</td><td>biuf</td><td>daughter 女儿</td></tr>
-    <tr><td>an</td><td>[ã]</td><td>banf</td><td>eagle 鹰</td></tr>
-    <tr><td>ian</td><td>[iã]</td><td>jianf</td><td>easy 容易</td></tr>
-    <tr><td>uan</td><td>[uã]</td><td>suanv</td><td>small 小</td></tr>
-    <tr><td>en</td><td>[ẽ]</td><td>enxqiv</td><td>nose 鼻子</td></tr>
-    <tr><td>in</td><td>[ĩ]</td><td>xinfgax</td><td>green 绿</td></tr>
-    <tr><td>ong</td><td>[ũ]</td><td>rongv</td><td>younger sister 妹妹</td></tr>
+
+    <tr class="expandable"><td>i</td><td>[i]</td><td>jir</td><td>foot 脚</td></tr>
+    <tr class="extra-examples"><td colspan="4">nix 找 look for &nbsp;|&nbsp; xief 有 have</td></tr>
+
+    <tr class="expandable"><td>u</td><td>[u]</td><td>wuf</td><td>cow 牛</td></tr>
+    <tr class="extra-examples"><td colspan="4">kuf 口 mouth &nbsp;|&nbsp; huf 虎 tiger</td></tr>
+
+    <tr class="expandable"><td>a</td><td>[a]</td><td>daf</td><td>wear 穿</td></tr>
+    <tr class="extra-examples"><td colspan="4">bav 看 look &nbsp;|&nbsp; taf 烧 burn &nbsp;|&nbsp; sax 劳 labour</td></tr>
+
+    <tr class="expandable"><td>ia</td><td>[ia]</td><td>qiaxpaix</td><td>sparrow 麻雀</td></tr>
+    <tr class="extra-examples"><td colspan="4">jianf 容易 easy &nbsp;|&nbsp; bixtiaox 平坝 flatland</td></tr>
+
+    <tr class="expandable"><td>o</td><td>[o]</td><td>gof</td><td>he 他</td></tr>
+    <tr class="extra-examples"><td colspan="4">pox 放 release &nbsp;|&nbsp; mor 猫 cat</td></tr>
+
+    <tr class="expandable"><td>e</td><td>[e]</td><td>mef</td><td>sky 天</td></tr>
+    <tr class="extra-examples"><td colspan="4">sef 你 you (formal) &nbsp;|&nbsp; jiev 追 chase</td></tr>
+
+    <tr class="expandable"><td>ie</td><td>[ie]</td><td>jiev</td><td>chase 追</td></tr>
+    <tr class="extra-examples"><td colspan="4">xief 有 have &nbsp;|&nbsp; pief 踢 kick</td></tr>
+
+    <tr class="expandable"><td>ai</td><td>[ai]</td><td>baiv</td><td>child 小孩</td></tr>
+    <tr class="extra-examples"><td colspan="4">paix 雀 sparrow &nbsp;|&nbsp; taif 摆 arrange</td></tr>
+
+    <tr class="expandable"><td>uai</td><td>[uai]</td><td>kuaiv</td><td>chair 椅子</td></tr>
+    <tr class="extra-examples"><td colspan="4">guaif 怪 strange &nbsp;|&nbsp; huair 花 flower</td></tr>
+
+    <tr class="expandable"><td>ei</td><td>[ei]/[ɨ]</td><td>anxbeix</td><td>uncle 叔叔</td></tr>
+    <tr class="extra-examples"><td colspan="4">meir 没 not have &nbsp;|&nbsp; peiv 陪 accompany</td></tr>
+
+    <tr class="expandable"><td>ui</td><td>[uai]</td><td>gofguix</td><td>cousin 表姐</td></tr>
+    <tr class="extra-examples"><td colspan="4">kuiv 贵 expensive &nbsp;|&nbsp; suir 随 follow</td></tr>
+
+    <tr class="expandable"><td>ao</td><td>[au]</td><td>baofqir</td><td>pheasant 野鸡</td></tr>
+    <tr class="extra-examples"><td colspan="4">taov 讨 ask &nbsp;|&nbsp; gaox 高 tall</td></tr>
+
+    <tr class="expandable"><td>iao</td><td>[iau]</td><td>bixtiaox</td><td>flatland 平坝</td></tr>
+    <tr class="extra-examples"><td colspan="4">jiaoв 叫 call &nbsp;|&nbsp; xiaof 小 small</td></tr>
+
+    <tr class="expandable"><td>ou</td><td>[ɔu]</td><td>axkoux</td><td>corner 角落</td></tr>
+    <tr class="extra-examples"><td colspan="4">gouv 狗 dog &nbsp;|&nbsp; touf 头 head</td></tr>
+
+    <tr class="expandable"><td>iu</td><td>[iɔu]</td><td>biuf</td><td>daughter 女儿</td></tr>
+    <tr class="extra-examples"><td colspan="4">liuv 流 flow &nbsp;|&nbsp; jiux 久 long time</td></tr>
+
+    <tr class="expandable"><td>an</td><td>[ã]</td><td>banf</td><td>eagle 鹰</td></tr>
+    <tr class="extra-examples"><td colspan="4">janv 站 stand &nbsp;|&nbsp; tanr 谈 talk</td></tr>
+
+    <tr class="expandable"><td>ian</td><td>[iã]</td><td>jianf</td><td>easy 容易</td></tr>
+    <tr class="extra-examples"><td colspan="4">tianv 甜 sweet &nbsp;|&nbsp; nianr 年 year</td></tr>
+
+    <tr class="expandable"><td>uan</td><td>[uã]</td><td>suanv</td><td>small 小</td></tr>
+    <tr class="extra-examples"><td colspan="4">guanr 关 close &nbsp;|&nbsp; huanf 欢 happy</td></tr>
+
+    <tr class="expandable"><td>en</td><td>[ẽ]</td><td>enxqiv</td><td>nose 鼻子</td></tr>
+    <tr class="extra-examples"><td colspan="4">menr 闷 stuffy &nbsp;|&nbsp; benf 笨 clumsy</td></tr>
+
+    <tr class="expandable"><td>in</td><td>[ĩ]</td><td>xinfgax</td><td>green 绿</td></tr>
+    <tr class="extra-examples"><td colspan="4">jinv 近 near &nbsp;|&nbsp; linr 邻 neighbour</td></tr>
+
+    <tr class="expandable"><td>ong</td><td>[ũ]</td><td>rongv</td><td>younger sister 妹妹</td></tr>
+    <tr class="extra-examples"><td colspan="4">gongv 共 together &nbsp;|&nbsp; longr 龙 dragon</td></tr>
   </table>
   <p><em>Note: Final i after initials z, c, s, r is pronounced [ɿ].</em></p>
 
@@ -154,7 +267,7 @@ th {
   <p><em>Note:</em></p>
   <ol>
     <li><em>Tones are entirely marked using tone letters. The letters placed immediately after the final (rhyme) indicate the tone.</em></li>
-    <li><em>In disyllabic words, when two high-level tones (Tone 1, pitch contour value 55) occur consecutively, the tone of the last syllable changes to a mid-level tone (pitch value 33), which is not part of the basic tone system. This is called tone sandhi. E.g., mixmax (蜜蜂 bee) is pronounced [mi˥ ma˧].</em></li>
+    <li><em>In disyllabic words, when two high-level tones (Tone 1, pitch value 55) occur consecutively, the tone of the last syllable changes to a mid-level tone (pitch value 33), which is not part of the basic tone system. This is called tone sandhi. E.g., mixmax (蜜蜂 bee) is pronounced [mi˥ ma˧].</em></li>
   </ol>
 
   <h2>V. Writing Sample</h2>
@@ -175,5 +288,18 @@ th {
   <p><em>Note: "Partair" is an onomatopoeia for the sound of the loom when Tujia girls weave "Xilankapu" (西兰卡布) brocade.</em></p>
 
 </main>
+
+<script>
+  document.querySelectorAll("tr.expandable").forEach(function(row) {
+    row.addEventListener("click", function() {
+      var next = row.nextElementSibling;
+      if (next && next.classList.contains("extra-examples")) {
+        next.classList.toggle("open");
+        row.classList.toggle("open");
+      }
+    });
+  });
+</script>
+
 </body>
 </html>
