@@ -223,7 +223,7 @@
 
 <footer>
   Data Source: STEDT (Sino-Tibetan Etymological Dictionary and Thesaurus), University of California, Berkeley<br>
-  Orthography: Draft Romanization Scheme for Tujia, Peng Xiumo & Ye Deshu, Jishou University 土家语拼音方案（草案），彭秀模、叶德书，吉首大学
+  Orthography: Draft Romanization Scheme for Tujia, Peng Xiumo & Ye Deshu, Jishou University
 </footer>
 
 <script>
@@ -280,7 +280,7 @@ function renderEntry(py, senses) {
 
 function search() {
   const q = qEl.value.trim().toLowerCase();
-  if (!q) { resEl.innerHTML = '<div class="hint">输入拼音、英文或中文开始搜索</div>'; return; }
+  if (!q) { resEl.innerHTML = '<div class="hint">Enter Tujia Romanization, English, or Chinese to start searching.</div>'; return; }
 
   let results = [];
 
@@ -338,7 +338,7 @@ function search() {
   }
 
   if (!results.length) {
-    resEl.innerHTML = '<div class="hint">未找到匹配词条</div>';
+    resEl.innerHTML = '<div class="hint">No results found.</div>';
     return;
   }
 
@@ -359,8 +359,8 @@ document.querySelectorAll('.tab').forEach(btn => {
     document.querySelectorAll('.tab').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     qEl.placeholder = mode === 'tujia'
-      ? '输入土家语拼音，如 dax、angr...'
-      : '输入英文或中文释义，如 water、水...';
+      ? 'Enter Tujia Romanization (e.g. dax, angr)…'
+      : 'Search by English or Chinese meaning (e.g. water, 水)…';
     search();
   });
 });
