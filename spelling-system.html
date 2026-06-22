@@ -1,475 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Spelling System – Tujia Language Project</title>
-<link rel="canonical" href="https://tujialanguage.com/spelling-system.html">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
-<meta name="theme-color" content="#ffffff">
-<meta name="description" content="The spelling system of the Tujia language, based on the 1984 draft phonetic scheme.">
-<meta property="og:title" content="Spelling System – Tujia Language Project">
-<meta property="og:description" content="The spelling system of the Tujia language, based on the 1984 draft phonetic scheme.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://tujialanguage.com/spelling-system.html">
-<meta property="og:image" content="https://tujialanguage.com/preview.jpg">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Spelling System – Tujia Language Project">
-<meta name="twitter:description" content="The spelling system of the Tujia language, based on the 1984 draft phonetic scheme.">
-<meta name="twitter:image" content="https://tujialanguage.com/preview.jpg">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-<style>
-body {
-  font-family: "Montserrat", sans-serif;
-  max-width: 900px;
-  margin: auto;
-  padding: 40px;
-  line-height: 1.6;
-  color: #222;
-}
-h1 {
-  font-size: 40px;
-  line-height: 1.2;
-}
-h2 { margin-top: 40px; }
-nav {
-  margin-top: 20px;
-  margin-bottom: 40px;
-}
-nav a {
-  margin-right: 16px;
-  margin-bottom: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  color: #333;
-  display: inline-block;
-}
-nav a:hover { text-decoration: underline; }
-table {
-  border-collapse: collapse;
-  width: 100%;
-  margin: 20px 0;
-}
-th, td {
-  border: 1px solid #ccc;
-  padding: 8px 12px;
-  text-align: left;
-}
-th {
-  background: #f5f5f5;
-  font-weight: 600;
-}
-tr.expandable {
-  cursor: pointer;
-}
-tr.expandable:hover {
-  background: #f0f0f0;
-}
-tr.expandable td:first-child::after {
-  content: " ▸";
-  font-size: 0.75em;
-  color: #999;
-}
-tr.expandable.open td:first-child::after {
-  content: " ▾";
-}
-tr.extra-examples {
-  display: none;
-  background: #fafafa;
-}
-tr.extra-examples.open {
-  display: table-row;
-}
-tr.extra-examples td {
-  border-top: none;
-  padding: 10px 12px 14px 12px;
-}
-.example-chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-.chip {
-  background: #f0f0f0;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  padding: 4px 10px;
-  font-size: 0.85em;
-  color: #333;
-  white-space: nowrap;
-}
-.chip span {
-  color: #888;
-  font-size: 0.9em;
-  margin-left: 4px;
-}
-.hint {
-  font-size: 0.85em;
-  color: #888;
-  margin-bottom: 4px;
-}
-@media (max-width: 600px) {
-  body {
-    padding: 24px 20px;
-  }
-  h1 {
-    font-size: 28px;
-  }
-  nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px 16px;
-  }
-  nav a {
-    margin-right: 0;
-  }
-  table {
-    display: block;
-    overflow-x: auto;
-    white-space: nowrap;
-  }
-}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tujia Spelling System · Tujia Language Project</title>
+  <link rel="canonical" href="https://tujialanguage.com/spelling-system.html">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="mask-icon" href="safari-pinned-tab.svg" color="#245c45">
+  <link rel="stylesheet" href="styles.css">
+  <meta name="theme-color" content="#f7f4ec">
+  <meta name="description" content="A clear reference to the draft Tujia spelling system: 21 initials, 23 finals, four tones and writing principles.">
+  <meta property="og:title" content="Tujia Spelling System">
+  <meta property="og:description" content="The draft Northern Tujia spelling system with IPA values and examples.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://tujialanguage.com/spelling-system.html">
+  <meta property="og:image" content="https://tujialanguage.com/preview.jpg">
+  <meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
-<h1>Tujia Language Project</h1>
-<nav>
-  <a href="/index.html">Home</a>
-  <a href="/spelling-system.html">Spelling System</a>
-  <a href="/grammar.html">Grammar</a>
-  <a href="/dictionary.html">Dictionary</a>
-  <a href="/texts.html">Texts</a>
-  <a href="/research.html">Research</a>
-</nav>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">Tujia Language Project</a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="spelling-system.html" aria-current="page">Spelling System</a>
+        <a href="grammar.html">Grammar</a>
+        <a href="dictionary.html">Dictionary</a>
+        <a href="texts.html">Texts</a>
+      </nav>
+    </div>
+  </header>
 
-<main>
-  <h2>Tujia Language Spelling System</h2>
-  <p>Based on the <em>Draft Phonetic Scheme for the Tujia Language</em> (1984), published by the Ethnic Studies Laboratory, Jishou University.</p>
+  <main>
+    <section class="page-hero">
+      <div class="wrap">
+        <p class="eyebrow">Reference · 拼音方案</p>
+        <h1>Tujia spelling system</h1>
+        <p class="lede">A practical reference to the <em>Draft Phonetic Scheme for the Tujia Language</em>, prepared by Peng Xiumo and Ye Deshu at Jishou University.</p>
+      </div>
+    </section>
 
-  <h2>I. Basic Principles</h2>
-  <ol>
-    <li>Tujia has two dialects: <strong>Northern</strong> (Longshan, Yongshun, Baojing, Guzhang) and <strong>Southern</strong> (Luxi). This scheme takes Longshan as the standard pronunciation point and the Northern dialect as the base.</li>
-    <li>The scheme uses exclusively <strong>Latin letters</strong>, aligned as closely as possible with the Chinese Pinyin system. Words are written as units.</li>
-    <li>Modern Chinese loanwords in Tujia are romanized according to local <strong>Southwestern Mandarin pronunciation</strong>, also kept close to Hanyu Pinyin conventions.</li>
-  </ol>
+    <div class="wrap content">
+      <article class="prose">
+        <p class="notice"><strong>Scope.</strong> Tujia has Northern varieties (including Longshan, Yongshun, Baojing and Guzhang) and a Southern variety in Luxi. This scheme takes Miaoshi in Longshan as its reference point and Northern Tujia as its base.</p>
 
-  <h2>II. Consonants</h2>
-  <p>Tujia has 21 consonants (initials):</p>
-  <p class="hint">Click any row to see more example words.</p>
-  <table>
-    <tr><th>Letter</th><th>IPA</th><th>Example</th><th>Meaning</th></tr>
+        <h2>Principles</h2>
+        <ol>
+          <li>The scheme uses Latin letters and follows Hanyu Pinyin conventions where practical.</li>
+          <li>Words, rather than individual syllables, are the basic units of writing.</li>
+          <li>Modern Chinese loans follow the local Southwestern Mandarin pronunciation while remaining close to Hanyu Pinyin spelling.</li>
+        </ol>
 
-    <tr class="expandable"><td>b</td><td>[p]</td><td>bav</td><td>look 看</td></tr>
-    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
-      <div class="chip">bax <span>粘贴 stick</span></div>
-      <div class="chip">bar <span>山坡 mountainside</span></div>
-      <div class="chip">baf <span>茶盘 tea tray</span></div>
-    </div></td></tr>
+        <h2>Initials</h2>
+        <p>The scheme lists 21 initials. The letter <span class="roman">y</span> represents IPA <span class="ipa">[j]</span>; the letter <span class="roman">j</span> represents <span class="ipa">[tɕ]</span>.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Letter</th><th>IPA</th><th>Example</th><th>Meaning</th></tr></thead>
+            <tbody>
+              <tr><td>b</td><td class="ipa">[p]</td><td>bav</td><td>look · 看</td></tr>
+              <tr><td>p</td><td class="ipa">[pʰ]</td><td>pox</td><td>put · 放</td></tr>
+              <tr><td>m</td><td class="ipa">[m]</td><td>mor</td><td>cat · 猫</td></tr>
+              <tr><td>d</td><td class="ipa">[t]</td><td>daf</td><td>wear · 穿</td></tr>
+              <tr><td>t</td><td class="ipa">[tʰ]</td><td>taf</td><td>roast · 烤</td></tr>
+              <tr><td>l</td><td class="ipa">[l]</td><td>lav</td><td>road · 路</td></tr>
+              <tr><td>g</td><td class="ipa">[k]</td><td>gar</td><td>crow · 乌鸦</td></tr>
+              <tr><td>k</td><td class="ipa">[kʰ]</td><td>kax</td><td>pass · 过</td></tr>
+              <tr><td>ng</td><td class="ipa">[ŋ]</td><td>ngaf</td><td>I, me · 我</td></tr>
+              <tr><td>h</td><td class="ipa">[x]</td><td>har</td><td>hit · 打</td></tr>
+              <tr><td>hx</td><td class="ipa">[ɣ]</td><td>hxaf</td><td>write · 写</td></tr>
+              <tr><td>j</td><td class="ipa">[tɕ]</td><td>jier</td><td>shout · 喊</td></tr>
+              <tr><td>q</td><td class="ipa">[tɕʰ]</td><td>qief</td><td>kick · 踢</td></tr>
+              <tr><td>n</td><td class="ipa">[ȵ]</td><td>nix</td><td>look for · 找</td></tr>
+              <tr><td>x</td><td class="ipa">[ɕ]</td><td>xief</td><td>have · 有</td></tr>
+              <tr><td>z</td><td class="ipa">[ts]</td><td>zav</td><td>take · 拿</td></tr>
+              <tr><td>c</td><td class="ipa">[tsʰ]</td><td>cav</td><td>spinning wheel · 纺车</td></tr>
+              <tr><td>s</td><td class="ipa">[s]</td><td>sav</td><td>cold · 冷</td></tr>
+              <tr><td>r</td><td class="ipa">[z]</td><td>rax</td><td>fly · 飞</td></tr>
+              <tr><td>y</td><td class="ipa">[j]</td><td>yir</td><td>see · 见</td></tr>
+              <tr><td>w</td><td class="ipa">[w]</td><td>wuf</td><td>cow · 牛</td></tr>
+            </tbody>
+          </table>
+        </div>
 
-    <tr class="expandable"><td>p</td><td>[pʰ]</td><td>pox</td><td>put; marry (of a woman) 放置；嫁</td></tr>
-    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
-      <div class="chip">paf <span>住 live</span></div>
-      <div class="chip">pif <span>吐 spit</span></div>
-    </div></td></tr>
+        <h2>Finals</h2>
+        <p>The scheme lists 23 finals. After <span class="roman">z, c, s</span> or <span class="roman">r</span>, final <span class="roman">i</span> is pronounced <span class="ipa">[ɿ]</span>.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Final</th><th>IPA</th><th>Example</th><th>Meaning</th></tr></thead>
+            <tbody>
+              <tr><td>i</td><td class="ipa">[i]</td><td>jir</td><td>foot · 脚</td></tr>
+              <tr><td>u</td><td class="ipa">[u]</td><td>wuf</td><td>cow · 牛</td></tr>
+              <tr><td>a</td><td class="ipa">[a]</td><td>daf</td><td>wear · 穿</td></tr>
+              <tr><td>ia</td><td class="ipa">[ia]</td><td>qiaxpaix</td><td>sparrow · 麻雀</td></tr>
+              <tr><td>ua</td><td class="ipa">[ua]</td><td>uaf</td><td>stop (to cattle) · 停（训牛）</td></tr>
+              <tr><td>o</td><td class="ipa">[o]</td><td>gof</td><td>he · 他</td></tr>
+              <tr><td>e</td><td class="ipa">[e]</td><td>mef</td><td>sky · 天</td></tr>
+              <tr><td>ie</td><td class="ipa">[ie]</td><td>jiev</td><td>chase · 追</td></tr>
+              <tr><td>ai</td><td class="ipa">[ai]</td><td>baiv</td><td>child · 小孩</td></tr>
+              <tr><td>uai</td><td class="ipa">[uai]</td><td>kuair</td><td>chair · 椅子</td></tr>
+              <tr><td>ei</td><td class="ipa">[ei]</td><td>anxbeix</td><td>uncle · 叔叔</td></tr>
+              <tr><td>ui</td><td class="ipa">[ui]</td><td>gofguix</td><td>older female cousin · 表姐</td></tr>
+              <tr><td>ao</td><td class="ipa">[au]</td><td>baofqir</td><td>pheasant · 野鸡</td></tr>
+              <tr><td>iao</td><td class="ipa">[iau]</td><td>bixtiaox</td><td>flatland · 平坝</td></tr>
+              <tr><td>ou</td><td class="ipa">[əu]</td><td>axkoux</td><td>corner · 角落</td></tr>
+              <tr><td>iu</td><td class="ipa">[iəu]</td><td>biuf</td><td>daughter · 女儿</td></tr>
+              <tr><td>an</td><td class="ipa">[ã]</td><td>banf</td><td>eagle · 鹰</td></tr>
+              <tr><td>ian</td><td class="ipa">[iã]</td><td>jianf</td><td>easy · 容易</td></tr>
+              <tr><td>uan</td><td class="ipa">[uã]</td><td>suanv</td><td>small · 小</td></tr>
+              <tr><td>en</td><td class="ipa">[ẽ]</td><td>enxqiv</td><td>nose · 鼻子</td></tr>
+              <tr><td>in</td><td class="ipa">[ĩ]</td><td>xinfgax</td><td>green · 绿</td></tr>
+              <tr><td>un</td><td class="ipa">[ẽu]</td><td>kunr</td><td>confined · 困</td></tr>
+              <tr><td>ong</td><td class="ipa">[uŋ]</td><td>rongv</td><td>younger sister · 妹</td></tr>
+            </tbody>
+          </table>
+        </div>
 
-    <tr class="expandable"><td>m</td><td>[m]</td><td>mor</td><td>cat 猫</td></tr>
-    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
-      <div class="chip">mef <span>天 sky</span></div>
-      <div class="chip">miv <span>火 fire</span></div>
-    </div></td></tr>
+        <h2>Tones</h2>
+        <p>A tone letter is written at the end of each syllable. Citation forms mark the basic tone rather than the changed tone.</p>
+        <div class="tone-grid">
+          <div class="tone"><b>x</b><strong>Tone 1 · 55</strong><br><span>high level · <span class="roman">rax</span></span></div>
+          <div class="tone"><b>r</b><strong>Tone 2 · 21</strong><br><span>low falling · <span class="roman">rar</span></span></div>
+          <div class="tone"><b>v</b><strong>Tone 3 · 53</strong><br><span>high falling · <span class="roman">rav</span></span></div>
+          <div class="tone"><b>f</b><strong>Tone 4 · 35</strong><br><span>mid rising · <span class="roman">raf</span></span></div>
+        </div>
+        <p>When two high-level syllables occur together, the second may surface with a mid-level value of 33. This is tone sandhi, not a fifth basic tone.</p>
 
-    <tr class="expandable"><td>d</td><td>[t]</td><td>daf</td><td>wear 穿</td></tr>
-    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
-      <div class="chip">div <span>要 want, need</span></div>
-      <div class="chip">diex <span>慢 slow</span></div>
-    </div></td></tr>
+        <h2>Using the scheme in this project</h2>
+        <p>The dictionary combines data from several publications and transcription systems. Northern records can be shown in the draft spelling. Southern Tujia records retain their source IPA and any converted spelling is labelled as a reference. Records that STEDT does not classify as Northern or Southern are marked “Dialect unspecified”.</p>
+        <p><a class="button" href="dictionary.html">Search the dictionary</a></p>
+      </article>
+    </div>
+  </main>
 
-    <tr class="expandable"><td>t</td><td>[tʰ]</td><td>taf</td><td>burn 烧</td></tr>
-    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
-      <div class="chip">tax <span>不 not</span></div>
-      <div class="chip">tief <span>摘 pick, pluck</span></div>
-    </div></td></tr>
-
-    <tr class="expandable"><td>l</td><td>[l]</td><td>lav</td><td>road 路</td></tr>
-    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
-      <div class="chip">lir <span>脚 foot</span></div>
-      <div class="chip">lof <span>眼 eye</span></div>
-    </div></td></tr>
-
-    <tr class="expandable"><td>g</td><td>[k]</td><td>gar</td><td>crow 乌鸦</td></tr>
-    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
-      <div class="chip">gav <span>挖 dig</span></div>
-      <div class="chip">gof <span>他 he</span></div>
-    </div></td></tr>
-
-    <tr class="expandable"><td>k</td><td>[kʰ]</td><td>kax</td><td>pass 过</td></tr>
-    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
-      <div class="chip">kar <span>苦 bitter</span></div>
-      <div class="chip">kuf <span>口 mouth</span></div>
-    </div></td></tr>
-
-    <tr class="expandable"><td>ng</td><td>[ŋ]</td><td>ngaf</td><td>I / me 我</td></tr>
-    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
-      <div class="chip">ngar <span>牛 cow</span></div>
-      <div class="chip">ngov <span>鱼 fish</span></div>
-    </div></td></tr>
-
-    <tr class="expandable"><td>h</td><td>[x]</td><td>har</td><td>hit 打</td></tr>
-    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
-      <div class="chip">hav <span>看 look</span></div>
-      <div class="chip">hof <span>火 fire</span></div>
-    </div></td></tr>
-
-    <tr class="expandable"><td>hx</td><td>[ɣ]</td><td>hxaf</td><td>write 写</td></tr>
-    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
-      <div class="chip">hxar <span>话 speech</span></div>
-      <div class="chip">hxov <span>活 live</span></div>
-    </div></td></tr>
-
-    <tr class="expandable"><td>j</td><td>[tɕ]</td><td>jier</td><td>shout 喊</td></tr>
-    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
-      <div class="chip">jianf <span>容易 easy</span></div>
-      <div class="chip">jir <span>脚 foot</span></div>
-    </div></td></tr>
-
-    <tr class="expandable"><td>q</td><td>[tɕʰ]</td><td>pief</td><td>kick 踢</td></tr>
-    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
-      <div class="chip">qiaxpaix <span>麻雀 sparrow</span></div>
-      <div class="chip">qiv <span>鼻 nose</span></div>
-    </div></td></tr>
-
-    <tr class="expandable"><td>n</td><td>[ȵ]</td><td>nix</td><td>look for 找</td></tr>
-    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
-      <div class="chip">nif <span>你 you</span></div>
-      <div class="chip">niex <span>斜 slant</span></div>
-    </div></td></tr>
-
-    <tr class="expandable"><td>x</td><td>[ɕ]</td><td>xief</td><td>have 有</td></tr>
-    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
-      <div class="chip">xinfgax <span>绿 green</span></div>
-      <div class="chip">xar <span>冷 cold</span></div>
-    </div></td></tr>
-
-    <tr class="expandable"><td>z</td><td>[ts]</td><td>zav</td><td>take 拿</td></tr>
-    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
-      <div class="chip">zar <span>左 left</span></div>
-      <div class="chip">zof <span>坐 sit</span></div>
-    </div></td></tr>
-
-    <tr class="expandable"><td>c</td><td>[tsʰ]</td><td>cav</td><td>spinning wheel 纺车</td></tr>
-    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
-      <div class="chip">car <span>草 grass</span></div>
-      <div class="chip">cof <span>粗 coarse</span></div>
-    </div></td></tr>
-
-    <tr class="expandable"><td>s</td><td>[s]</td><td>sav</td><td>cold 冷</td></tr>
-    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
-      <div class="chip">sar <span>话 word</span></div>
-      <div class="chip">sax <span>劳 labour</span></div>
-    </div></td></tr>
-
-    <tr class="expandable"><td>v</td><td>[z]</td><td>rax</td><td>fly 飞</td></tr>
-    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
-      <div class="chip">rav <span>挂 hang</span></div>
-      <div class="chip">rar <span>鸡 chicken</span></div>
-    </div></td></tr>
-
-    <tr class="expandable"><td>y</td><td>[j]</td><td>yir</td><td>see 见</td></tr>
-    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
-      <div class="chip">yav <span>有 have</span></div>
-      <div class="chip">yof <span>用 use</span></div>
-    </div></td></tr>
-
-    <tr class="expandable"><td>w</td><td>[w]</td><td>wuf</td><td>cow 牛</td></tr>
-    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
-      <div class="chip">wav <span>弯 bend</span></div>
-      <div class="chip">wor <span>挖 dig</span></div>
-    </div></td></tr>
-  </table>
-  <p><em>Note: n and l are allophones; n before the vowel i is read as [ȵ].</em></p>
-
-  <h2>III. Vowels / Finals</h2>
-  <p>Tujia has 21 finals:</p>
-  <p class="hint">Click any row to see more example words.</p>
-  <table>
-    <tr><th>Final</th><th>IPA</th><th>Example</th><th>Meaning</th></tr>
-
-    <tr class="expandable"><td>i</td><td>[i]/[ɨ]/[ɿ]</td><td>jir</td><td>foot 脚</td></tr>
-    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
-      <div class="chip">nix <span>找 look for</span></div>
-      <div class="chip">xief <span>有 have</span></div>
-    </div></td></tr>
-
-    <tr class="expandable"><td>u</td><td>[u]</td><td>wuf</td><td>cow 牛</td></tr>
-    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
-      <div class="chip">kuf <span>口 mouth</span></div>
-      <div class="chip">huf <span>虎 tiger</span></div>
-    </div></td></tr>
-
-    <tr class="expandable"><td>a</td><td>[a]</td><td>daf</td><td>wear 穿</td></tr>
-    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
-      <div class="chip">bav <span>看 look</span></div>
-      <div class="chip">taf <span>烧 burn</span></div>
-      <div class="chip">sax <span>劳 labour</span></div>
-    </div></td></tr>
-
-    <tr class="expandable"><td>ia</td><td>[ia]</td><td>qiaxpaix</td><td>sparrow 麻雀</td></tr>
-    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
-      <div class="chip">jianf <span>容易 easy</span></div>
-      <div class="chip">bixtiaox <span>平坝 flatland</span></div>
-    </div></td></tr>
-
-    <tr class="expandable"><td>o</td><td>[o]</td><td>gof</td><td>he 他</td></tr>
-    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
-      <div class="chip">pox <span>放 release</span></div>
-      <div class="chip">mor <span>猫 cat</span></div>
-    </div></td></tr>
-
-    <tr class="expandable"><td>e</td><td>[e]</td><td>mef</td><td>sky 天</td></tr>
-    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
-      <div class="chip">sef <span>你 you (formal)</span></div>
-      <div class="chip">jiev <span>追 chase</span></div>
-    </div></td></tr>
-
-    <tr class="expandable"><td>ie</td><td>[ie]</td><td>jiev</td><td>chase 追</td></tr>
-    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
-      <div class="chip">xief <span>有 have</span></div>
-      <div class="chip">pief <span>踢 kick</span></div>
-    </div></td></tr>
-
-    <tr class="expandable"><td>ai</td><td>[ai]</td><td>baiv</td><td>child 小孩</td></tr>
-    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
-      <div class="chip">paix <span>雀 sparrow</span></div>
-      <div class="chip">taif <span>摆 arrange</span></div>
-    </div></td></tr>
-
-    <tr class="expandable"><td>uai</td><td>[uai]</td><td>kuaiv</td><td>chair 椅子</td></tr>
-    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
-      <div class="chip">guaif <span>怪 strange</span></div>
-      <div class="chip">huair <span>花 flower</span></div>
-    </div></td></tr>
-
-    <tr class="expandable"><td>ei</td><td>[ei]</td><td>anxbeix</td><td>uncle 叔叔</td></tr>
-    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
-      <div class="chip">meir <span>没 not have</span></div>
-      <div class="chip">peiv <span>陪 accompany</span></div>
-    </div></td></tr>
-
-    <tr class="expandable"><td>ui</td><td>[uai]</td><td>gofguix</td><td>cousin 表姐</td></tr>
-    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
-      <div class="chip">kuiv <span>贵 expensive</span></div>
-      <div class="chip">suir <span>随 follow</span></div>
-    </div></td></tr>
-
-    <tr class="expandable"><td>ao</td><td>[au]</td><td>baofqir</td><td>pheasant 野鸡</td></tr>
-    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
-      <div class="chip">taov <span>讨 ask</span></div>
-      <div class="chip">gaox <span>高 tall</span></div>
-    </div></td></tr>
-
-    <tr class="expandable"><td>iao</td><td>[iau]</td><td>bixtiaox</td><td>flatland 平坝</td></tr>
-    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
-      <div class="chip">jiaov <span>叫 call</span></div>
-      <div class="chip">xiaof <span>小 small</span></div>
-    </div></td></tr>
-
-    <tr class="expandable"><td>ou</td><td>[ɔu]</td><td>axkoux</td><td>corner 角落</td></tr>
-    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
-      <div class="chip">gouv <span>狗 dog</span></div>
-      <div class="chip">touf <span>头 head</span></div>
-    </div></td></tr>
-
-    <tr class="expandable"><td>iu</td><td>[iɔu]</td><td>biuf</td><td>daughter 女儿</td></tr>
-    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
-      <div class="chip">liuv <span>流 flow</span></div>
-      <div class="chip">jiux <span>久 long time</span></div>
-    </div></td></tr>
-
-    <tr class="expandable"><td>an</td><td>[ã]</td><td>banf</td><td>eagle 鹰</td></tr>
-    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
-      <div class="chip">janv <span>站 stand</span></div>
-      <div class="chip">tanr <span>谈 talk</span></div>
-    </div></td></tr>
-
-    <tr class="expandable"><td>ian</td><td>[iã]</td><td>jianf</td><td>easy 容易</td></tr>
-    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
-      <div class="chip">tianv <span>甜 sweet</span></div>
-      <div class="chip">nianr <span>年 year</span></div>
-    </div></td></tr>
-
-    <tr class="expandable"><td>uan</td><td>[uã]</td><td>suanv</td><td>small 小</td></tr>
-    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
-      <div class="chip">guanr <span>关 close</span></div>
-      <div class="chip">huanf <span>欢 happy</span></div>
-    </div></td></tr>
-
-    <tr class="expandable"><td>en</td><td>[ẽ]</td><td>enxqiv</td><td>nose 鼻子</td></tr>
-    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
-      <div class="chip">menr <span>闷 stuffy</span></div>
-      <div class="chip">benf <span>笨 clumsy</span></div>
-    </div></td></tr>
-
-    <tr class="expandable"><td>in</td><td>[ĩ]</td><td>xinfgax</td><td>green 绿</td></tr>
-    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
-      <div class="chip">jinv <span>近 near</span></div>
-      <div class="chip">linr <span>邻 neighbour</span></div>
-    </div></td></tr>
-
-    <tr class="expandable"><td>ong</td><td>[ũ]</td><td>rongv</td><td>younger sister 妹妹</td></tr>
-    <tr class="extra-examples"><td colspan="4"><div class="example-chips">
-      <div class="chip">gongv <span>共 together</span></div>
-      <div class="chip">longr <span>龙 dragon</span></div>
-    </div></td></tr>
-  </table>
-  <p><em>Note: Final i after initials z, c, s, r is pronounced [ɿ].</em></p>
-
-  <h2>IV. Tones</h2>
-  <p>Tujia has 4 basic tones. Tones are marked by a letter placed immediately after the vowel:</p>
-  <table>
-    <tr><th>Tone</th><th>Type</th><th>Contour</th><th>Marker</th><th>Example</th></tr>
-    <tr><td>1</td><td>High-level</td><td>˥55</td><td>x</td><td>rax 飞 fly</td></tr>
-    <tr><td>2</td><td>Low-falling</td><td>˨˩21</td><td>r</td><td>rar 鸡 chicken</td></tr>
-    <tr><td>3</td><td>High-falling</td><td>˥˧53</td><td>v</td><td>rav 挂 hang</td></tr>
-    <tr><td>4</td><td>High-rising</td><td>˧˥35</td><td>f</td><td>raf 跑 run</td></tr>
-  </table>
-  <p><em>Note:</em></p>
-  <ol>
-    <li><em>Tones are entirely marked using tone letters. The letters placed immediately after the final (rhyme) indicate the tone.</em></li>
-    <li><em>In disyllabic words, when two high-level tones (Tone 1, pitch value 55) occur consecutively, the tone of the last syllable changes to a mid-level tone (pitch value 33), which is not part of the basic tone system. This is called tone sandhi. E.g., mixmax (蜜蜂 bee) is pronounced [mi˥ ma˧].</em></li>
-  </ol>
-
-  <h2>V. Writing Sample</h2>
-  <p>The following is an excerpt from a folk song, demonstrating the spelling system in use:</p>
-  <table>
-    <tr><th>Tujia</th><th>Chinese 中文</th><th>English</th></tr>
-    <tr><td colspan="3"><strong>Arkov (哥 elder brother):</strong></td></tr>
-    <tr><td>Partair partair kaxpuv tav,</td><td>扒台扒台织土花，</td><td>Weaving brocade at the loom,</td></tr>
-    <tr><td>Ngaf Sef Covnier lixhongx gav.</td><td>我在你后檐把土挖。</td><td>I dig earth beneath your eave.</td></tr>
-    <tr><td>Lofpux curcur Iaxniex bav,</td><td>两眼直望到日西斜，</td><td>Eyes gazing until the sun sets west,</td></tr>
-    <tr><td>Ongvkar der Iavsuv sifdix tav.</td><td>中饭都不来送一下。</td><td>You didn't even bring lunch.</td></tr>
-    <tr><td colspan="3"><strong>Rongv (妹 younger sister):</strong></td></tr>
-    <tr><td>Partair partair kaxpuv tav,</td><td>扒台扒台织土花，</td><td>Weaving brocade at the loom,</td></tr>
-    <tr><td>Nif anx covnier lixhongx gav.</td><td>你在我后檐把土挖。</td><td>You dig earth beneath my eave.</td></tr>
-    <tr><td>Nif ngaf dav pirweir tavlanr huaf,</td><td>千万莫把脾气发，</td><td>Please don't lose your temper,</td></tr>
-    <tr><td>Nif enrjief qivmor Sar axdav tav?</td><td>你来怎不把信捎？</td><td>Why didn't you send word you were coming?</td></tr>
-  </table>
-  <p><em>Note: "Partair" is an onomatopoeia for the sound of the loom when Tujia girls weave "Xilankapu" (西兰卡布) brocade.</em></p>
-
-</main>
-
-<script>
-  document.querySelectorAll("tr.expandable").forEach(function(row) {
-    row.addEventListener("click", function() {
-      var next = row.nextElementSibling;
-      if (next && next.classList.contains("extra-examples")) {
-        next.classList.toggle("open");
-        row.classList.toggle("open");
-      }
-    });
-  });
-</script>
-
+  <footer class="site-footer">
+    <div class="wrap"><span>© Tujia Language Project</span><span>Scheme: Peng Xiumo &amp; Ye Deshu, Jishou University</span></div>
+  </footer>
 </body>
 </html>

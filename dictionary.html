@@ -4,6 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tujia Dictionary</title>
+<meta name="description" content="Search Northern Tujia by draft spelling, source transcription, English or Chinese; other source records are retained for reference.">
+<link rel="canonical" href="https://tujialanguage.com/dictionary.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <style>
   :root {
     --black:  #111;
@@ -15,7 +18,6 @@
     --bg2:    #f7f7f7;
     --mono:   "JetBrains Mono","Fira Mono","Courier New",monospace;
   }
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: "Montserrat", "Segoe UI", system-ui, sans-serif; background: var(--bg); color: var(--black); }
 
@@ -137,27 +139,59 @@
   .site-nav a[href="/dictionary.html"] { color: #fff; border-bottom-color: #fff; }
 
 </style>
+<link rel="stylesheet" href="styles.css">
+<style>
+  .site-header { padding-top: 40px; }
+  .site-header .site-nav { margin-top: 20px; padding: 0; border: 0; background: transparent; overflow: visible; }
+  .site-header .site-nav a { padding: 0; color: #333; font-size: .94rem; letter-spacing: 0; }
+  .site-header .site-nav a:hover, .site-header .site-nav a[aria-current="page"] { color: #333; border: 0; text-decoration: underline; }
+  .dictionary-hero { padding-bottom: 18px; }
+  .search-wrap { padding: 12px 0 16px; border: 0; background: #fff; }
+  .search-controls { width: min(820px, calc(100% - 40px)); max-width: none; margin: 0 auto; }
+  #q, #dialect-filter { min-height: 44px; border: 1px solid #777; border-radius: 2px; background: #fff; }
+  #q { max-width: none; }
+  #q:focus { box-shadow: 0 0 0 2px rgba(0,0,0,.08); }
+  .tabs { justify-content: center; padding: 0 20px; border-bottom-color: #bbb; }
+  .tab.active { color: #111; border-bottom-color: #111; }
+  .scheme-link { max-width: 820px; margin: 16px auto 0; padding: 0 24px; color: #777; font-size: .8rem; }
+  .scheme-link a { font-weight: 600; }
+  .entry { border-left-color: #222; }
+  footer.site-footer { color: #777; text-align: left; }
+  @media (max-width: 520px) {
+    .site-header { padding-top: 28px; }
+    .search-controls { width: calc(100% - 28px); }
+    .tabs { justify-content: flex-start; overflow-x: auto; }
+    .tab { white-space: nowrap; padding-inline: 12px; }
+  }
+</style>
 </head>
 <body>
 
-<nav class="site-nav">
-  <a href="/index.html">Home</a>
-  <a href="/spelling-system.html">Spelling System</a>
-  <a href="/grammar.html">Grammar</a>
-  <a href="/dictionary.html">Dictionary</a>
-  <a href="/texts.html">Texts</a>
-  <a href="/research.html">Research</a>
-</nav>
-<header>
-  <h1>Tujia Dictionary</h1>
-  <p>Data: STEDT (UC Berkeley) · 4832 entries · Orthography: Tujia Pinyin Scheme (draft)</p>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">Tujia Language Project</a>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a href="spelling-system.html">Spelling System</a>
+      <a href="grammar.html">Grammar</a>
+      <a href="dictionary.html" aria-current="page">Dictionary</a>
+      <a href="texts.html">Texts</a>
+    </nav>
+  </div>
 </header>
+<section class="dictionary-hero">
+  <div class="wrap">
+    <p class="eyebrow">4,832 searchable forms</p>
+    <h1>Tujia Dictionary</h1>
+    <p>Search Northern Tujia by draft spelling, source transcription, English or Chinese. Southern and unclassified source records remain available as clearly labelled reference material.</p>
+  </div>
+</section>
 
 <div class="search-wrap">
   <div class="search-controls">
     <input id="q" type="search" placeholder="Search Tujia pinyin, English or Chinese..." autocomplete="off" autofocus>
     <select id="dialect-filter" aria-label="Dialect filter">
-      <option value="all">All dialect labels</option><option value="northern">Northern</option><option value="southern">Southern</option><option value="unspecified">Unspecified</option>
+      <option value="northern" selected>Northern</option><option value="all">All dialect labels</option><option value="southern">Southern (reference)</option><option value="unspecified">Unspecified (reference)</option>
     </select>
   </div>
 </div>
@@ -168,29 +202,15 @@
 </div>
 
 
-<details class="scheme">
-  <summary>Tujia Pinyin Scheme (Draft)</summary>
-  <div class="scheme-body">
-    <p class="scheme-credit">Institute of Ethnic Studies, Jishou University · Peng Xiumo &amp; Ye Deshu</p>
-    <p>The scheme uses the Miaoshi variety of Longshan as its reference pronunciation and is based on Northern Tujia. It uses Latin letters, follows Hanyu Pinyin where practical, and writes words as units. Modern Chinese loans follow the local Southwestern Mandarin pronunciation.</p>
-    <h3>Initials (21)</h3>
-    <div class="table-scroll"><table><thead><tr><th>Pinyin</th><th>b</th><th>p</th><th>m</th><th>d</th><th>t</th><th>l</th><th>g</th><th>k</th><th>ng</th><th>h</th><th>hx</th><th>j</th><th>q</th><th>n</th><th>x</th><th>z</th><th>c</th><th>s</th><th>r</th><th>y</th><th>w</th></tr></thead><tbody><tr><th>IPA</th><td>p</td><td>pʰ</td><td>m</td><td>t</td><td>tʰ</td><td>l</td><td>k</td><td>kʰ</td><td>ŋ</td><td>x</td><td>ɣ</td><td>tɕ</td><td>tɕʰ</td><td>ȵ</td><td>ɕ</td><td>ts</td><td>tsʰ</td><td>s</td><td>z</td><td>j</td><td>w</td></tr></tbody></table></div>
-    <h3>Finals (23)</h3>
-    <div class="table-scroll"><table><thead><tr><th>Pinyin</th><th>i</th><th>u</th><th>a</th><th>ia</th><th>ua</th><th>o</th><th>e</th><th>ie</th><th>ai</th><th>uai</th><th>ei</th><th>ui</th><th>ao</th><th>iao</th><th>ou</th><th>iu</th><th>an</th><th>ian</th><th>uan</th><th>en</th><th>in</th><th>un</th><th>ong</th></tr></thead><tbody><tr><th>IPA</th><td>i</td><td>u</td><td>a</td><td>ia</td><td>ua</td><td>o</td><td>e</td><td>ie</td><td>ai</td><td>uai</td><td>ei</td><td>ui</td><td>au</td><td>iau</td><td>əu</td><td>iəu</td><td>ã</td><td>iã</td><td>uã</td><td>ẽ</td><td>ĩ</td><td>ẽu</td><td>uŋ</td></tr></tbody></table></div>
-    <p class="scheme-note">After z, c, s or r, the final i is pronounced [ɿ]. The letters f and w may also serve as tone letters or be used in words from other languages.</p>
-    <h3>Tones</h3>
-    <div class="table-scroll compact"><table><thead><tr><th>Tone</th><th>1</th><th>2</th><th>3</th><th>4</th></tr></thead><tbody><tr><th>Contour</th><td>55</td><td>21</td><td>53</td><td>35</td></tr><tr><th>Letter</th><td>x</td><td>r</td><td>v</td><td>f</td></tr></tbody></table></div>
-    <p class="scheme-note">There are four basic tones and one tone-sandhi category. Citation forms mark the basic tone, not the changed tone.</p>
-  </div>
-</details>
+<p class="scheme-link">New to the orthography? Read the <a href="spelling-system.html">Tujia spelling system</a> before searching.</p>
 
 
 <div id="results">
   <div class="hint">Enter Tujia pinyin, English or Chinese to search</div>
 </div>
 
-<footer>
-  STEDT · UC Berkeley · Chinese translations: DeepL · Orthography: Peng Xiumo & Ye Deshu, Jishou University
+<footer class="site-footer">
+  <div class="wrap">STEDT · UC Berkeley · Chinese translations: DeepL · Orthography: Peng Xiumo &amp; Ye Deshu, Jishou University</div>
 </footer>
 
 <script>
@@ -214,40 +234,44 @@ const norm = s => s
   .toLowerCase()
   .trim();
 
+const esc = value => String(value ?? '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+const FWD_ENTRIES = Object.entries(FWD).map(([py, senses]) => ({py, senses, pyn: norm(py)}));
+const REV_ENTRIES = Object.entries(REV).map(([key, items]) => ({key, items, kn: norm(key)}));
+
 const dialectAllowed = s => dialectEl.value === 'all' || s.dialect === dialectEl.value;
 const dialectBadge = code => `<span class="dialect ${code}">${DIALECT[code]||DIALECT.unspecified}</span>`;
 
 function renderFwd(py, senses) {
   const f = senses[0];
-  const ipa  = f.ipa !== py ? `<span class="ipa">[${f.ipa}]</span>` : '';
-  const orig = f.orig !== py ? `<span class="orig">(${f.orig})</span>` : '';
+  const ipa  = f.ipa !== py ? `<span class="ipa">[${esc(f.ipa)}]</span>` : '';
+  const orig = f.orig !== py ? `<span class="orig">(${esc(f.orig)})</span>` : '';
   const reference = senses.some(s => s.dialect === 'southern') ? '<span class="reference-note">draft spelling is for reference only</span>' : '';
   const rows = senses.map(s => {
-    const pos  = s.pos  ? `<span class="pos">${POS[s.pos]||s.pos}</span>` : '';
-    const zh   = s.zh   ? `<span class="zh">/ ${s.zh}</span>` : '';
-    const lang = s.lang ? `<span class="lang">${s.lang}</span>` : '';
+    const pos  = s.pos  ? `<span class="pos">${esc(POS[s.pos]||s.pos)}</span>` : '';
+    const zh   = s.zh   ? `<span class="zh">/ ${esc(s.zh)}</span>` : '';
+    const lang = s.lang ? `<span class="lang">${esc(s.lang)}</span>` : '';
     const dialect = dialectBadge(s.dialect);
-    const sourceForm = s.dialect === 'southern' ? `<span class="source-form">source IPA: ${s.orig}</span>` : '';
-    const sem  = s.sem  ? `<span class="sem">[${s.sem}]</span>` : '';
-    const src  = s.src  ? `<span class="src">— ${s.src}</span>` : '';
-    return `<div class="sense">${pos}<span class="gloss">${s.gloss}</span>${zh}${dialect}${sourceForm}${lang}${sem}${src}</div>`;
+    const sourceForm = s.dialect === 'southern' ? `<span class="source-form">source IPA: ${esc(s.orig)}</span>` : '';
+    const sem  = s.sem  ? `<span class="sem">[${esc(s.sem)}]</span>` : '';
+    const src  = s.src  ? `<span class="src">— ${esc(s.src)}</span>` : '';
+    return `<div class="sense">${pos}<span class="gloss">${esc(s.gloss)}</span>${zh}${dialect}${sourceForm}${lang}${sem}${src}</div>`;
   }).join('');
-  return `<div class="entry"><div class="hw-row"><span class="pinyin">${py}</span>${ipa}${orig}${reference}</div><div class="senses">${rows}</div></div>`;
+  return `<div class="entry"><div class="hw-row"><span class="pinyin">${esc(py)}</span>${ipa}${orig}${reference}</div><div class="senses">${rows}</div></div>`;
 }
 
 function renderRev(key, items) {
   const rows = items.map(s => {
-    const ipa  = s.ipa !== s.py ? `<span class="ipa">[${s.ipa}]</span>` : '';
-    const orig = s.orig !== s.py ? `<span class="orig">(${s.orig})</span>` : '';
-    const pos  = s.pos  ? `<span class="pos">${POS[s.pos]||s.pos}</span>` : '';
-    const lang = s.lang ? `<span class="lang">${s.lang}</span>` : '';
+    const ipa  = s.ipa !== s.py ? `<span class="ipa">[${esc(s.ipa)}]</span>` : '';
+    const orig = s.orig !== s.py ? `<span class="orig">(${esc(s.orig)})</span>` : '';
+    const pos  = s.pos  ? `<span class="pos">${esc(POS[s.pos]||s.pos)}</span>` : '';
+    const lang = s.lang ? `<span class="lang">${esc(s.lang)}</span>` : '';
     const dialect = dialectBadge(s.dialect);
     const reference = s.dialect === 'southern' ? '<span class="reference-note">reference spelling</span>' : '';
-    const src  = s.src  ? `<span class="src">— ${s.src}</span>` : '';
-    return `<div class="sense"><span class="pinyin" style="font-size:1.05rem">${s.py}</span>${ipa}${orig}${reference}${pos}${dialect}${lang}${src}</div>`;
+    const src  = s.src  ? `<span class="src">— ${esc(s.src)}</span>` : '';
+    return `<div class="sense"><span class="pinyin" style="font-size:1.05rem">${esc(s.py)}</span>${ipa}${orig}${reference}${pos}${dialect}${lang}${src}</div>`;
   }).join('');
-  const zh = items[0]?.zh ? `<span class="zh" style="font-size:.9rem;color:#666;margin-left:6px">/ ${items[0].zh}</span>` : '';
-  return `<div class="entry"><div class="hw-row"><span class="gloss" style="font-size:1.2rem;font-weight:700">${key}</span>${zh}</div><div class="senses">${rows}</div></div>`;
+  const zh = items[0]?.zh ? `<span class="zh" style="font-size:.9rem;color:#666;margin-left:6px">/ ${esc(items[0].zh)}</span>` : '';
+  return `<div class="entry"><div class="hw-row"><span class="gloss" style="font-size:1.2rem;font-weight:700">${esc(key)}</span>${zh}</div><div class="senses">${rows}</div></div>`;
 }
 
 function search() {
@@ -259,10 +283,9 @@ function search() {
   let results = [];
 
   if (mode === 'tujia') {
-    for (const [py, senses] of Object.entries(FWD)) {
+    for (const {py, senses, pyn} of FWD_ENTRIES) {
       const visible = senses.filter(dialectAllowed);
       if (!visible.length) continue;
-      const pyn = norm(py);
       // Pinyin match
       const pyMatch = pyn.includes(qn) || py.toLowerCase().includes(q) || visible.some(s => norm(s.orig).includes(qn) || s.orig.toLowerCase().includes(q));
       // Gloss match
@@ -288,10 +311,9 @@ function search() {
     // Reverse: exact key first, then fuzzy
     const exact = [], fuzzy = [];
     const seen = new Set();
-    for (const [key, items] of Object.entries(REV)) {
+    for (const {key, items, kn} of REV_ENTRIES) {
       const visible = items.filter(dialectAllowed);
       if (!visible.length) continue;
-      const kn = norm(key);
       if (kn === qn || key === q) {
         if (!seen.has(key)) { seen.add(key); exact.push({key, items: visible}); }
       } else if (kn.includes(qn) || key.includes(q)) {
@@ -301,10 +323,9 @@ function search() {
     results = [...exact, ...fuzzy];
     // 如果没找到释义匹配，也搜土家语拼音（作为补充）
     if (results.length === 0) {
-      for (const [py, senses] of Object.entries(FWD)) {
+      for (const {py, senses, pyn} of FWD_ENTRIES) {
         const visible = senses.filter(dialectAllowed);
         if (!visible.length) continue;
-        const pyn = norm(py);
         if (pyn.includes(qn) || py.toLowerCase().includes(q)) {
           const isPrefix = pyn.startsWith(qn) || py.toLowerCase().startsWith(q);
           results.push({key: py, items: visible.map(s => ({...s, py, orig: s.orig, ipa: s.ipa})), _isFwd: true, score: isPrefix ? py.length : py.length+500});
@@ -320,7 +341,11 @@ function search() {
   }
 }
 
-qEl.addEventListener('input', search);
+let searchTimer;
+qEl.addEventListener('input', () => {
+  clearTimeout(searchTimer);
+  searchTimer = setTimeout(search, 90);
+});
 dialectEl.addEventListener('change', search);
 document.querySelectorAll('.tab').forEach(btn => {
   btn.addEventListener('click', () => {

@@ -1,88 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tujia Language Project</title>
-<link rel="canonical" href="https://tujialanguage.com">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
-<meta name="theme-color" content="#ffffff">
-<meta name="description" content="Documentation and resources for the Tujia language including grammar, texts and vocabulary.">
-<meta name="keywords" content="Tujia language, Tibeto-Burman, linguistics, grammar, dictionary">
-<meta name="author" content="Tujia Language Project">
-<meta property="og:title" content="Tujia Language Project">
-<meta property="og:description" content="Documentation and resources for the Tujia language including grammar, texts and vocabulary.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://tujialanguage.com">
-<meta property="og:image" content="https://tujialanguage.com/preview.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Tujia Language Project">
-<meta name="twitter:description" content="Documentation and resources for the Tujia language including grammar, texts and vocabulary.">
-<meta name="twitter:image" content="https://tujialanguage.com/preview.jpg">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-<style>
-body {
-  font-family: "Montserrat", sans-serif;
-  max-width: 900px;
-  margin: auto;
-  padding: 40px;
-  line-height: 1.6;
-  color: #222;
-}
-h1 {
-  font-size: 40px;
-  line-height: 1.2;
-}
-nav {
-  margin-top: 20px;
-  margin-bottom: 40px;
-}
-nav a {
-  margin-right: 16px;
-  margin-bottom: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  color: #333;
-  display: inline-block;
-}
-nav a:hover {
-  text-decoration: underline;
-}
-@media (max-width: 600px) {
-  body {
-    padding: 24px 20px;
-  }
-  h1 {
-    font-size: 28px;
-  }
-  nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px 16px;
-  }
-  nav a {
-    margin-right: 0;
-  }
-}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tujia Language Project</title>
+  <link rel="canonical" href="https://tujialanguage.com/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="mask-icon" href="safari-pinned-tab.svg" color="#000000">
+  <link rel="stylesheet" href="styles.css">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Documentation and resources focused on Northern Tujia, including a searchable dictionary and the draft spelling system.">
+  <meta name="author" content="Tujia Language Project">
+  <meta property="og:title" content="Tujia Language Project">
+  <meta property="og:description" content="Documentation and resources focused on Northern Tujia.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tujialanguage.com/">
+  <meta property="og:image" content="https://tujialanguage.com/preview.jpg">
+  <meta name="twitter:card" content="summary">
 </head>
 <body>
-<h1>Tujia Language Project</h1>
-<nav>
-  <a href="/index.html">Home</a>
-  <a href="/spelling-system.html">Spelling System</a>
-  <a href="/grammar.html">Grammar</a>
-  <a href="/dictionary.html">Dictionary</a>
-  <a href="/texts.html">Texts</a>
-  <a href="/research.html">Research</a>
-</nav>
-<main>
-  <p>Welcome to the Tujia Language Project.</p>
-  <p>This website documents the Tujia language, including grammar, vocabulary, texts and research resources.</p>
-</main>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">Tujia Language Project</a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="spelling-system.html">Spelling System</a>
+        <a href="grammar.html">Grammar</a>
+        <a href="dictionary.html">Dictionary</a>
+        <a href="texts.html">Texts</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap home-main">
+    <section class="intro">
+      <p>Welcome to the Tujia Language Project, a resource focused on Northern Tujia.</p>
+      <p>This website documents Northern Tujia through a searchable dictionary and a practical guide to its draft spelling system. Southern and unclassified source records are retained only for reference and are clearly labelled.</p>
+    </section>
+
+    <section class="resource-list" aria-label="Resources">
+      <a class="resource-row" href="dictionary.html">
+        <strong>Dictionary</strong>
+        <span>Search 4,832 forms by Tujia spelling, source transcription, English or Chinese.</span>
+        <b aria-hidden="true">→</b>
+      </a>
+      <a class="resource-row" href="spelling-system.html">
+        <strong>Spelling System</strong>
+        <span>Reference tables for 21 initials, 23 finals and four basic tones.</span>
+        <b aria-hidden="true">→</b>
+      </a>
+    </section>
+
+    <p class="dialect-note"><strong>Dialect note.</strong> The draft spelling scheme is based on Northern Tujia, with Miaoshi in Longshan as its reference point. Southern source forms remain visible in IPA, and their converted spellings are marked as reference forms.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap"><span>© Tujia Language Project</span><span>Lexical data: STEDT, UC Berkeley</span></div>
+  </footer>
 </body>
 </html>
