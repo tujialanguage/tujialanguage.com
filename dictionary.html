@@ -89,10 +89,40 @@
     header, .search-wrap, .tabs { padding-left: 14px; padding-right: 14px; }
     #results { padding: 12px 14px 32px; }
   }
+  .site-nav {
+    display: flex;
+    gap: 0;
+    border-bottom: 1px solid var(--line);
+    padding: 0 24px;
+    background: var(--black);
+    overflow-x: auto;
+  }
+  .site-nav a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: .8rem;
+    font-weight: 500;
+    padding: 10px 16px;
+    letter-spacing: .4px;
+    white-space: nowrap;
+    border-bottom: 2px solid transparent;
+    transition: color .15s;
+  }
+  .site-nav a:hover { color: #fff; }
+  .site-nav a[href="/dictionary.html"] { color: #fff; border-bottom-color: #fff; }
+
 </style>
 </head>
 <body>
 
+<nav class="site-nav">
+  <a href="/index.html">Home</a>
+  <a href="/spelling-system.html">Spelling System</a>
+  <a href="/grammar.html">Grammar</a>
+  <a href="/dictionary.html">Dictionary</a>
+  <a href="/texts.html">Texts</a>
+  <a href="/research.html">Research</a>
+</nav>
 <header>
   <h1>Tujia Dictionary</h1>
   <p>Data: STEDT (UC Berkeley) · 5076 entries · Orthography: Tujia Pinyin Scheme (draft)</p>
