@@ -7,6 +7,7 @@
 <meta name="description" content="Search Northern Tujia by draft spelling, source transcription, English or Chinese; other source records are retained for reference.">
 <link rel="canonical" href="https://tujialanguage.com/dictionary.html">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
+<script>if (new URLSearchParams(location.search).has('embed')) document.documentElement.classList.add('dictionary-embed');</script>
 <style>
   :root {
     --black:  #111;
@@ -115,6 +116,20 @@
 </style>
 <link rel="stylesheet" href="styles.css">
 <style>
+  .dictionary-embed, .dictionary-embed body { background: transparent; }
+  .dictionary-embed .site-header,
+  .dictionary-embed .dictionary-hero,
+  .dictionary-embed .scheme-link,
+  .dictionary-embed .site-footer { display: none; }
+  .dictionary-embed .search-wrap { position: sticky; top: 0; z-index: 5; padding: 12px; border-bottom: 1px solid rgba(0,0,0,.1); background: rgba(255,255,255,.48); backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px); }
+  .dictionary-embed .search-controls { width: 100%; }
+  .dictionary-embed #q { min-width: 0; background: rgba(255,255,255,.82); }
+  .dictionary-embed #dialect-filter { min-width: 132px; }
+  .dictionary-embed #dialect-filter { background: rgba(255,255,255,.82); }
+  .dictionary-embed .tabs { justify-content: flex-start; padding: 0 8px; background: rgba(255,255,255,.4); }
+  .dictionary-embed .tab { padding: 9px 10px; font-size: .72rem; white-space: nowrap; }
+  .dictionary-embed #results { padding: 12px 14px 36px; }
+  .dictionary-embed .entry { background: rgba(255,255,255,.8); }
   /* The dictionary has its own legacy stylesheet above. Pin the shared site
      header here so it cannot inherit the dictionary's control spacing. */
   .site-header .site-nav {
@@ -192,7 +207,7 @@
   <div class="search-controls">
     <input id="q" type="search" placeholder="Search Tujia pinyin, English or Chinese..." autocomplete="off">
     <select id="dialect-filter" aria-label="Dialect filter">
-      <option value="northern" selected>Northern</option><option value="all">All dialect labels</option><option value="southern">Southern (reference)</option><option value="unspecified">Unspecified (reference)</option>
+      <option value="all" selected>All dialect labels</option><option value="northern">Northern</option><option value="southern">Southern (reference)</option><option value="unspecified">Unspecified (reference)</option>
     </select>
   </div>
 </div>
@@ -350,11 +365,26 @@ function search() {
 }
 
 let searchTimer;
+const isEmbedded = document.documentElement.classList.contains('dictionary-embed');
+const notifyWidget = () => {
+  if (!isEmbedded || window.parent === window) return;
+  window.parent.postMessage({
+    type: 'tujia-dictionary-state',
+    q: qEl.value,
+    dialect: dialectEl.value,
+    mode
+  }, '*');
+};
+
 qEl.addEventListener('input', () => {
   clearTimeout(searchTimer);
   searchTimer = setTimeout(search, 90);
+  notifyWidget();
 });
-dialectEl.addEventListener('change', search);
+dialectEl.addEventListener('change', () => {
+  search();
+  notifyWidget();
+});
 document.querySelectorAll('.tab').forEach(btn => {
   btn.addEventListener('click', () => {
     mode = btn.dataset.mode;
@@ -364,8 +394,26 @@ document.querySelectorAll('.tab').forEach(btn => {
       ? 'Enter Tujia pinyin, e.g. dax, angr...'
       : 'Enter English or Chinese, e.g. water, 水...';
     search();
+    notifyWidget();
   });
 });
+
+const initialParams = new URLSearchParams(location.search);
+const initialDialect = initialParams.get('dialect');
+if (initialDialect && dialectEl.querySelector(`option[value="${CSS.escape(initialDialect)}"]`)) {
+  dialectEl.value = initialDialect;
+}
+const initialMode = initialParams.get('mode');
+if (initialMode === 'tujia' || initialMode === 'english') {
+  mode = initialMode;
+  document.querySelectorAll('.tab').forEach(btn => btn.classList.toggle('active', btn.dataset.mode === mode));
+  qEl.placeholder = mode === 'tujia'
+    ? 'Enter Tujia pinyin, e.g. dax, angr...'
+    : 'Enter English or Chinese, e.g. water, 水...';
+}
+qEl.value = initialParams.get('q') || '';
+if (qEl.value) search();
+notifyWidget();
 </script>
 </body>
 </html>
