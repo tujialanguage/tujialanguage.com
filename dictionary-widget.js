@@ -72,7 +72,10 @@
     openButton.focus();
   };
 
-  openButton.addEventListener('click', open);
+  openButton.addEventListener('click', () => {
+    if (widget.classList.contains('is-open')) close();
+    else open();
+  });
   closeButton.addEventListener('click', close);
   document.addEventListener('keydown', event => {
     if (event.key === 'Escape' && widget.classList.contains('is-open')) close();
